@@ -178,4 +178,9 @@ editor.addEventListener("keydown", e => {
 
         editor.selectionStart = editor.selectionEnd = s + 4;
     }
+
+    if (e.key === "Enter" && e.shiftKey) {
+        e.preventDefault();
+        insertLineBreak();
+    }
 });
