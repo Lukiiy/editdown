@@ -128,6 +128,15 @@ function insertTable() {
     editor.focus();
 }
 
+function insertLineBreak() {
+    const selEnd = editor.selectionEnd;
+
+    splice(selEnd, selEnd, "  \n");
+
+    editor.selectionStart = editor.selectionEnd = selEnd + 3;
+    editor.focus();
+}
+
 function importFile() {
     fileInput.value = "";
     fileInput.click();
